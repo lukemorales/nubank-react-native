@@ -23,7 +23,18 @@
       "error",
       { "extensions": [".js", ".jsx"] }
     ],
+    "prettier/prettier": [
+      "error",
+      {
+        "trailingComma": "es5",
+        "singleQuote": true,
+        "printWidth": 120,
+        "tabWidth": 4,
+        "useTabs": true
+      }
+    ],
     "import/prefer-default-export": "off",
+    "no-tabs": ["error", { "allowIndentationTabs": true }],
     "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
     "react/jsx-one-expression-per-line": "off",
     "react-native/no-color-literals": "off",
