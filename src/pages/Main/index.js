@@ -42,11 +42,11 @@ export default function Main() {
 
 
       Animated.timing(translateY, {
-        toValue: opened ? 460 : 0,
+        toValue: opened ? 480 : 0,
         duration: 250,
         useNativeDriver: true,
       }).start(() => {
-        offset = opened ? 460 : 0;
+        offset = opened ? 480 : 0;
         translateY.setOffset(offset);
         translateY.setValue(0);
       });
@@ -63,11 +63,19 @@ export default function Main() {
           <Card style={{
             transform: [{
               translateY: translateY.interpolate({
-                inputRange: [-250, 0, 460],
-                outputRange: [-50, 0, 460],
+                inputRange: [-250, 0, 480],
+                outputRange: [-50, 0, 480],
                 extrapolate: 'clamp',
               }),
-            }],
+            },
+            {
+              scale: translateY.interpolate({
+                inputRange: [-250, 0, 480],
+                outputRange: [1.03, 1, 0.95],
+                extrapolate: 'clamp',
+              }),
+            },
+            ],
           }}
           >
             <CardHeader>
@@ -80,7 +88,7 @@ export default function Main() {
             </CardContent>
             <CardFooter>
               <Annotation>
-              Transferência de R$ 8753,45 recebida de Luke Morales ontem.
+                Transferência de R$ 8753,45 recebida de Luke Morales.
               </Annotation>
             </CardFooter>
           </Card>

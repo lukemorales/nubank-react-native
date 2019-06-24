@@ -8,7 +8,7 @@ import {
 const Menu = ({ translateY }) => (
   <Container style={{
     opacity: translateY.interpolate({
-      inputRange: [0, 200],
+      inputRange: [0, 400],
       outputRange: [0, 1],
     }),
   }}

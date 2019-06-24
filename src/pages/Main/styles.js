@@ -7,7 +7,7 @@ export const Container = styled.View`
 	flex: 1;
 	background: #8b10Ae;
 	padding-top: ${getStatusBarHeight()}px;
-	justify-content: space-around;
+	justify-content: space-between;
 `;
 
 export const Content = styled.View`
